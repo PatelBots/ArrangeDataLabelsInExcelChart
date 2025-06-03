@@ -1,3 +1,29 @@
+# Smart Data Label Arranger for Excel Line Charts
+
+This VBA macro intelligently arranges data labels in an Excel line chart, ensuring labels are:
+- Clearly readable
+- Aligned to their X-axis positions
+- Stacked vertically in multiple columns to avoid overlap
+- Dynamically adjustable based on how many labels exist
+
+## 📌 Features
+- Automatically filters out empty labels
+- Distributes labels into 8 vertical stacks (or fewer if needed)
+- Aligns each label with its corresponding X-axis point
+- Avoids clutter by stacking within each column
+- Adjustable spacing and font size for readability
+
+## 🧠 Use Case
+When your Excel line chart has many overlapping data labels from cell values, this macro helps spread them out vertically in a structured, readable way while keeping them aligned to the data point.
+
+## 💾 How to Use
+1. Open your Excel workbook with a line chart.
+2. Press `Alt + F11` to open the VBA Editor.
+3. Insert a new module (`Insert > Module`) and paste the code below.
+4. Close the editor and run the macro using `Alt + F8`.
+
+## 🛠️ VBA Code
+```vba
 Sub ArrangeLabelsIn8StacksAlignedX_Improved()
     Dim ws As Worksheet
     Dim chtObj As ChartObject
